@@ -13,7 +13,8 @@ A newly created playground.
 
 ### V0.1 initial 
     - NEW: here we go...
-    - NEW: should be up and running now (but untested)
+    - NEW: should be up and running now
+    - NEW: added a C interface
 
 
 Have fun  

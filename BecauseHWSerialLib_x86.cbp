@@ -35,6 +35,8 @@
 		<Unit filename="asSerial.h" />
 		<Unit filename="asSerialCollection.cpp" />
 		<Unit filename="asSerialCollection.h" />
+		<Unit filename="asTest.cpp" />
+		<Unit filename="asTest.h" />
 		<Unit filename="inc/Serial.h" />
 		<Unit filename="inc/SerialEx.h" />
 		<Unit filename="inc/SerialMFC.h" />

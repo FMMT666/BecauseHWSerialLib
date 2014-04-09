@@ -27,10 +27,10 @@ using namespace std;
 
 //
 // TODO:
+//   - asSerialCollection as singleton
 //   - SendVector() method
 //   - ReadVector() method
 //
-
 
 
 

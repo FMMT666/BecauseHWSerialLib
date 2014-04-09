@@ -5,4 +5,5 @@ cca*
 *.html
 *.depend
 *.cscope*
+*.layout
 siseli*
