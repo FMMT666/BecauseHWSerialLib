@@ -45,6 +45,8 @@ class asSerialCollection
 		bool CheckHandleFree( int handle );		// checks if "handle" is already in use
 
 		bool UnMount( int handle );						// unmounts and destroys the serial object referenced by "handle"
+		void UnMountAll( void );							// unmounts and destroys all serial objects
+
 		bool Check( int handle, int port );		// checks if a serial port (COM port) exists
 
 		bool Config( int handle, long baud, int bits, int parity, int stop); // configuration of the serial object references by "handle"

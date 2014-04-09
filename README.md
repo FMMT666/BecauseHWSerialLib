@@ -12,7 +12,8 @@ A newly created playground.
 ## CHANGES
 
 ### V0.1 initial 
-    - NEW: here we go... (nothing functional yet)
+    - NEW: here we go...
+    - NEW: should be up and running now (but untested)
 
 
 Have fun  

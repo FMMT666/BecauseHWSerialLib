@@ -48,8 +48,6 @@ using namespace std;
 //************************************************************************************************
 asSerialCollection::asSerialCollection()
 {
-	for( auto serObj=asSerialMap.begin(); serObj != asSerialMap.end(); ++serObj )
-		delete serObj->second;
 }
 
 
@@ -61,9 +59,8 @@ asSerialCollection::asSerialCollection()
 //************************************************************************************************
 asSerialCollection::~asSerialCollection()
 {
-	// TODO: empty map container and destroy all serials
+	UnMountAll();
 }
-
 
 
 //************************************************************************************************
@@ -198,6 +195,25 @@ bool asSerialCollection::UnMount( int handle )
 	}
 
 	return ret;
+}
+
+
+
+//************************************************************************************************
+//*** asSerialCollection::UnMountAll
+//***
+//*** Destroys all serial objects.
+//***
+//*** RETURNS:
+//***   true -> ok
+//************************************************************************************************
+void asSerialCollection::UnMountAll( )
+{
+	for( auto serObj=asSerialMap.begin(); serObj != asSerialMap.end(); ++serObj )
+		delete serObj->second;
+
+	asSerialMap.clear();
+
 }
 
 
