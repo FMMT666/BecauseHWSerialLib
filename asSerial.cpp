@@ -554,6 +554,14 @@ void asSerial::BufferFlush ()
 //************************************************************************************************
 int asSerial::ConfigPacketStart ( int *start )
 {
+
+	//********************************
+	//*** TODO: NEEDS REWORK
+	//***       The pointer is a relict from the old C implementation.
+	//***       Leaving it now (*shudder*) until the complete packet start
+	//***       will be configurable (see packet end).
+	//********************************
+
 	my->packetStart[1] = *start;
 
 	if( my->packetStart[1] > 255 )
@@ -573,6 +581,14 @@ int asSerial::ConfigPacketStart ( int *start )
 //************************************************************************************************
 int asSerial::ConfigPacketEnd ( int *end )
 {
+
+	//********************************
+	//*** TODO: NEEDS REWORK
+	//***       The pointer is a relict from the old C implementation.
+	//***       Leaving it now (*shudder*) until we have support for
+	//***       more than one byte.
+	//********************************
+
 	my->packetEnd[1] = (*end++);
 
 	if( my->packetEnd[1] > 255 )
@@ -593,6 +609,14 @@ int asSerial::ConfigPacketEnd ( int *end )
 //************************************************************************************************
 int asSerial::ConfigPacketChar ( int ch )
 {
+
+	//********************************
+	//*** TODO: NEEDS REWORK
+	//***       The pointer is a relict from the old C implementation.
+	//***       Leaving it now (*shudder*) until we have support for
+	//***       more than one byte.
+	//********************************
+
 	my->packetChar = ch;
 
 	if( my->packetChar > 255 )
