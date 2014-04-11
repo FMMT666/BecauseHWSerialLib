@@ -1,5 +1,6 @@
 //
-// asSerial, a CSerial wrapper object (for Scilab)
+// BecauseHW!SerialLib,
+// derived from asSerial, a CSerial wrapper object
 // FMMT666(ASkr), 2010, 2012, 2013; www askrprojects.net
 //
 // This library is free software; you can redistribute it and/or

@@ -1,5 +1,6 @@
 //
-// asSerial, a CSerial wrapper object
+// BecauseHW!SerialLib,
+// derived from asSerial, a CSerial wrapper object
 // FMMT666(ASkr), 2010, 2012, 2013, 2014; www askrprojects.net
 //
 // This library is free software; you can redistribute it and/or
@@ -18,7 +19,7 @@
 
 #include <windows.h>
 
-#include "asSerialCollection.h"
+#include "asSerialCollect.h"
 
 using namespace std;
 
@@ -27,7 +28,7 @@ using namespace std;
 
 //
 // TODO:
-//   - asSerialCollection as singleton
+//   - asSerialCollect as singleton
 //   - SendVector() method
 //   - ReadVector() method
 //

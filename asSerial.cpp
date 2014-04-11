@@ -1,5 +1,6 @@
 //
-// asSerial, a CSerial wrapper object (for Scilab)
+// BecauseHW!SerialLib,
+// derived from asSerial, a CSerial wrapper object
 // FMMT666(ASkr), 2010, 2012, 2013, 2014; www askrprojects.net
 //
 // This library is free software; you can redistribute it and/or
@@ -641,6 +642,14 @@ int asSerial::ConfigPacketChar ( int ch )
 //************************************************************************************************
 int asSerial::SendPacket ( int *data, int len )
 {
+
+	//********************************
+	//*** TODO: NEEDS REWORK
+	//***       The pointer is a relict from the old C implementation.
+	//***       Leaving it now (*shudder*) until we have support for
+	//***       more than one byte.
+	//********************************
+
 	int i;
 	int OK = ERROROR;
 	int nlen = 0;
@@ -654,15 +663,8 @@ int asSerial::SendPacket ( int *data, int len )
 		// packet start
 		for( i = 0; i < 2; i++)
 		{
-
-//			NEW V06: packet start is always sent
-//			if( my->packetStart[i] >= 0 )
-//			{
-				*tmp++ = my->packetStart[i] & 0xff;
-				nlen++;
-//			}
-//			else
-//				break;
+			*tmp++ = my->packetStart[i] & 0xff;
+			nlen++;
 		}
 
 		// data
@@ -672,31 +674,19 @@ int asSerial::SendPacket ( int *data, int len )
 			// special character
 			if( *tmp++ == ( my->packetChar & 0xff ) )
 			{
-
-//				NEW V06: removed support for supressed special character
-//				if( my->packetChar >= 0x00 )
-//				{
-					*tmp++ = my->packetChar & 0xff;
-					nlen++;
-//				}
+				*tmp++ = my->packetChar & 0xff;
+				nlen++;
 			}
 			nlen++;
 		}
 
 		// packet end
-		// NEW V06 -> only skip (and completely skip) if <ETX> is <0
 		if( my->packetEnd[1] >= 0 )
 		{
 			for( i = 0; i < 2; i++ )
 			{
-//				NEW V06: removed support for sending "half" packet markers.
-//				if( my->packetEnd[i] >= 0 )
-//				{
-					*tmp++ = my->packetEnd[i] & 0xff;
-					nlen++;
-//				}
-//				else
-//					break;
+				*tmp++ = my->packetEnd[i] & 0xff;
+				nlen++;
 			}// END for
 		}
 
@@ -806,6 +796,14 @@ int asSerial::BufferCountPackets()
 //************************************************************************************************
 int asSerial::RecvRawPacketByte(int *data, int len )
 {
+
+	//********************************
+	//*** TODO: NEEDS REWORK
+	//***       The pointer is a relict from the old C implementation.
+	//***       Leaving it now (*shudder*) until we have support for
+	//***       more than one byte.
+	//********************************
+
 	int i;
 	int state = 0;
 	int lenRead = 0;
