@@ -59,7 +59,8 @@ An easy to use and HW friendly Windoze C/C++ serial port library.
 
 ### V0.2 up and running
     - NEW: all C interface functions, except packet related stuff, implemented
-    - NEW: added x64 Code::Blocks project file (for TDM64-GCC)  
+    - NEW: added x64 Code::Blocks project file (for TDM64-GCC)
+    - NEW: added baud rates 500000 and 512000 bits/s  
 
 
 Have fun  

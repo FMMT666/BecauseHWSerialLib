@@ -123,7 +123,9 @@ public:
 		EBaud115200  = CBR_115200,	// 115200 bits/sec
 		EBaud128000  = CBR_128000,	// 128000 bits/sec
 		EBaud256000  = CBR_256000,	// 256000 bits/sec
-		EBaud921600  = 921600,			//
+		EBaud500000  = 500000,			// 500000 bits/s
+		EBaud512000  = 512000,			// 512000 bits/s
+		EBaud921600  = 921600,			// 921600 bits/s
 		EBaud1000000 = 1000000,			// 1000000 bits/s
 		EBaud2000000 = 2000000,			// 2000000 bits/s
 		EBaud3000000 = 3000000,			// 3000000 bits/s
